@@ -1,0 +1,324 @@
+/* Основные переменные и сброс */
+:root {
+    --primary-color: #2b3a8c;
+    --purple-accent: #6c5ce7;
+    --purple-hover: #5a4bcf;
+    --bg-light: #f4f7fb;
+    --card-bg: #ffffff;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Навигация */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--purple-accent);
+}
+
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+/* Кнопки */
+.btn {
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-purple {
+    background-color: var(--purple-accent);
+    color: #ffffff;
+}
+
+.btn-purple:hover {
+    background-color: var(--purple-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    color: var(--text-dark);
+}
+
+.btn-outline:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+}
+
+/* Hero секция */
+.hero {
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.sub-heading {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Секции */
+.section-title {
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: var(--text-dark);
+    margin: 40px 0 25px;
+}
+
+/* Ключевые функции (Features) */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--purple-accent);
+}
+
+.feature-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.feature-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Технологический стек */
+.tech-stack {
+    padding: 20px 0;
+}
+
+.stack-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.badge {
+    background-color: var(--card-bg);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+/* Проекты */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.project-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.project-info {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.badge-status {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-deployed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-progress {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+/* Подвал */
+.footer {
+    background-color: #1a2332;
+    color: #ffffff;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Адаптивность для мобильных устройств (Chrome DevTools Check) */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+}
